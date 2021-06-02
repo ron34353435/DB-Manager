@@ -14,12 +14,12 @@ const DBConfig = () => {
         /*console.log("BACKEND ->" + process.env.BACKEND)
         console.log("PORT ->" + process.env.PORT)
         console.log("PORT ->" + process.env.HOST)*/
-        axios.post(`http://backend-test.apps.openforce.openforce.biz:8080/connect`, {
+        axios.post(`http://backend-test.apps.openforce.openforce.biz/connect`, {
             ip: ip,
             dbName: dbName
         },{'Content-Type': 'application/json;charset=UTF-8',
       "Access-Control-Allow-Origin": "*"}).then((res) =>
-            axios.post(`http://backend-test.apps.openforce.openforce.biz:8080/tables`, {
+            axios.post(`http://backend-test.apps.openforce.openforce.biz/tables`, {
                 dbName: dbName
             }).then((res) => { 
                 console.log(res)

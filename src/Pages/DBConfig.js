@@ -17,10 +17,8 @@ const DBConfig = () => {
         axios.post(`http://172.30.171.108:8080/connect`, {
             ip: ip,
             dbName: dbName
-        }, {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                    'Accept': 'application/json'}
-            }).then((res) =>
+        },{'Content-Type': 'application/x-www-form-urlencoded',
+                    'Accept': 'application/json'}).then((res) =>
             axios.post(`http://172.30.171.108:8080/tables`, {
                 dbName: dbName
             }).then((res) => { 

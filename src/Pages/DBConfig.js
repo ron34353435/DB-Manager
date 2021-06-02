@@ -18,7 +18,6 @@ const DBConfig = () => {
             ip: ip,
             dbName: dbName
         }).then((res) =>
-            console.log(res)
             axios.post(`http://backend:8080/tables`, {
                 dbName: dbName
             }).then((res) => { 

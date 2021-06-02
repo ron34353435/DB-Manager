@@ -20,7 +20,8 @@ const DBConfig = () => {
         },{'Content-Type': 'application/json;charset=UTF-8',
       "Access-Control-Allow-Origin": "*"}).then((res) =>
             axios.post(`http://backend-test.apps.openforce.openforce.biz/tables`, {
-                dbName: dbName
+                dbName: dbName,
+                ip: ip
             }).then((res) => { 
                 console.log(res)
                 setMessage(JSON.stringify(res.data))

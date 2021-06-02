@@ -11,6 +11,9 @@ const DBConfig = () => {
 
     const connectDB = () => {
         setMessage("מתחבר...")
+        console.log("BACKEND ->" + process.env.BACKEND)
+        console.log("PORT ->" + process.env.PORT)
+        console.log("PORT ->" + process.env.HOST)
         axios.post(`http://${process.env.BACKEND}:8080/connect`, {
             ip: ip,
             dbName: dbName

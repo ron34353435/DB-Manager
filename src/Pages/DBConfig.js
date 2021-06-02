@@ -11,13 +11,14 @@ const DBConfig = () => {
 
     const connectDB = () => {
         setMessage("מתחבר...")
-        console.log("BACKEND ->" + process.env.BACKEND)
+        /*console.log("BACKEND ->" + process.env.BACKEND)
         console.log("PORT ->" + process.env.PORT)
-        console.log("PORT ->" + process.env.HOST)
+        console.log("PORT ->" + process.env.HOST)*/
         axios.post(`http://172.30.171.108:8080/connect`, {
             ip: ip,
             dbName: dbName
         }).then((res) =>
+            console.log(res)
             axios.post(`http://172.30.171.108:8080/tables`, {
                 dbName: dbName
             }).then((res) => { 

@@ -11,9 +11,6 @@ const DBConfig = () => {
 
     const connectDB = () => {
         setMessage("מתחבר...")
-        /*console.log("BACKEND ->" + process.env.BACKEND)
-        console.log("PORT ->" + process.env.PORT)
-        console.log("PORT ->" + process.env.HOST)*/
         axios.post(`http://backend-test.apps.openforce.openforce.biz/connect`, {
             ip: ip,
             dbName: dbName

@@ -11,12 +11,12 @@ const DBConfig = () => {
 
     const connectDB = () => {
         setMessage("מתחבר...")
-        axios.post(`http://backend2-test.apps.openforce.openforce.biz/connect`, {
+        axios.post(`http://backend-final-test.apps.openforce.openforce.biz/connect`, {
             ip: ip,
             dbName: dbName
         },{'Content-Type': 'application/json;charset=UTF-8',
       "Access-Control-Allow-Origin": "*"}).then((res) =>
-            axios.post(`http://backend2-test.apps.openforce.openforce.biz/tables`, {
+            axios.post(`http://backend-final-test.apps.openforce.openforce.biz/tables`, {
                 dbName: dbName,
                 ip: ip
             }).then((res) => { 
